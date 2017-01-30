@@ -11,6 +11,7 @@ import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     public EditText msgText;
     public ScrollView sv;
     ////////////////////////////////////////네트워크 변수들
-
+    private static final String TAG = "MainActivity";
 
     /** Called when the activity is first created. */
     @Override
@@ -75,8 +76,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mResultTextView = (TextView)findViewById(R.id.result);		//결과 출력 뷰
 
         //추가한 라인    fcm
+        //Log.v("태그", "메시지");
         FirebaseMessaging.getInstance().subscribeToTopic("news");
-        FirebaseInstanceId.getInstance().getToken();
+        //FirebaseInstanceId.getInstance().getToken();
+        String token = FirebaseInstanceId.getInstance().getToken();
+        Log.d(TAG, "Refreshed token: " + token);
+        //dKCGvgdcOsI:APA91bGFWAM1WXDfB3EYE_HO9tfbZIujZHE2jZQNQw4QTqPYeoZWE1NNltmxNi5gXIZ7tKU9UOrclby1VqmaU0AjVqeG_BOIsYy12bU7ObmFpsNGJ34kLYuORNrQ6vFtOaHxyqmG3ayP
     }
 
 
