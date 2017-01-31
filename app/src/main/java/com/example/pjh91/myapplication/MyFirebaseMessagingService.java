@@ -34,10 +34,11 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("서버에서 보낸 메시지")//"서버에서 보낸 메시지"
-                .setContentText(messageBody)//messageBody
-                .setAutoCancel(true)
-                .setSound(defaultSoundUri).setLights(000000255,500,2000)
+                .setContentTitle("서버에서 보낸 메시지")//"서버에서 보낸 메시지"  //타이틀이름
+                .setContentText(messageBody)//messageBody   //알림내용
+                .setAutoCancel(true)    //팝업누르면 제거됨
+                .setSound(defaultSoundUri)  //도착알람
+                .setLights(000000255,500,2000)  //엘이디
                 .setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
