@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         //FirebaseInstanceId.getInstance().getToken();
         String token = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, "Refreshed token: " + token);
-        //dKCGvgdcOsI:APA91bGFWAM1WXDfB3EYE_HO9tfbZIujZHE2jZQNQw4QTqPYeoZWE1NNltmxNi5gXIZ7tKU9UOrclby1VqmaU0AjVqeG_BOIsYy12bU7ObmFpsNGJ34kLYuORNrQ6vFtOaHxyqmG3ayP
+        //eKIHISNYfcc:APA91bFNl0pJtk8E5GMH_pfr9TmxihTARVOfB6M6UKAUrZVLE49gfyXQ2kHwFmqVY2D88CLIo9rp6XQRRvG3fa6iPAvNyi4tEYhVVDIEqrx9hPvPIDl0Yt-ogVVDs5J-n4agoVU32F7n
     }
 
 

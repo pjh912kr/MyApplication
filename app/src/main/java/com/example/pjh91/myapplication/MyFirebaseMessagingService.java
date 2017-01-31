@@ -34,10 +34,10 @@ public class MyFirebaseMessagingService extends com.google.firebase.messaging.Fi
         Uri defaultSoundUri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("FCM Push Test")
-                .setContentText(messageBody)
+                .setContentTitle("서버에서 보낸 메시지")//"서버에서 보낸 메시지"
+                .setContentText(messageBody)//messageBody
                 .setAutoCancel(true)
-                .setSound(defaultSoundUri)
+                .setSound(defaultSoundUri).setLights(000000255,500,2000)
                 .setContentIntent(pendingIntent);
 
         NotificationManager notificationManager =
